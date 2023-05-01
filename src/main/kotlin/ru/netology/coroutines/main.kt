@@ -14,7 +14,7 @@ import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 private val gson = Gson()
-private val BASE_URL = "http://127.0.0.1:9999"
+private const val BASE_URL = "http://127.0.0.1:9999"
 private val client = OkHttpClient.Builder()
     .addInterceptor(HttpLoggingInterceptor(::println).apply {
         level = HttpLoggingInterceptor.Level.BODY
